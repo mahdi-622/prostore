@@ -4,7 +4,7 @@ import { getProductById } from "@/lib/actions/product.action";
 import { notFound } from "next/navigation";
 import ProductForm from "@/components/admin/product-form";
 
-export const metdata: Metadata = {
+export const metadata: Metadata = {
   title: "Update Product",
 };
 
