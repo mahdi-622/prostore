@@ -42,10 +42,14 @@ export async function signInWithCredentials(
   }
 }
 
-// sighn out user
+// sign out the user
 export async function signOutUser() {
   const currentCart = await getMyCart();
-  await prisma.cart.delete({ where: { id: currentCart?.id } });
+
+  if (currentCart && currentCart.id) {
+    await prisma.cart.delete({ where: { id: currentCart.id } });
+  }
+
   await signOut();
 }
 
