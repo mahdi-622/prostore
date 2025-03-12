@@ -10,8 +10,8 @@ import { cookies } from "next/headers";
 
 export const config = {
   pages: {
-    signIn: "sign-in",
-    error: "sign-in",
+    signIn: "/sign-in",
+    error: "/sign-in",
   },
   session: {
     strategy: "jwt" as const,
